@@ -1,2 +1,7 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>게시판</h1>
+<p>글을 써주세요</p>
+<form action="/posts/create">
+  제목: <input type="text" name="title" />
+  내용: <textarea name="body"></textarea>
+  <input type="submit" value="뿅뿅뿅"/>
+</form>
