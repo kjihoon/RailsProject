@@ -1,0 +1,8 @@
+<h1>게시판</h1>
+<p>수정 하기</p>
+
+<form action="/posts/editimp/<%= @post.id%>">
+  제목: <input type="text" name="title" value="<%= @post.title%>" />
+  내용: <textarea name="body"><%= @post.body%></textarea>
+  <input type="submit" value="뿅뿅뿅"/>
+</form>

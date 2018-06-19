@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     #post = Post.new
     #post.title =  params[:title]
     #post.body = parmas[:body]
+    flash[:alert] = "글이 작성되었씁니다."
     redirect_to "/posts/#{post.id}"
   end
 
@@ -26,6 +27,20 @@ class PostsController < ApplicationController
   def destroy
     post =Post.find(params[:id])
     post.destroy
+    flash[:notice] = "글이 삭제되었씁니다."
     redirect_to "/"
+
+  end
+  def editimp
+    post = Post.find(params[:id])
+    post.title=params[:title]
+    post.body=params[:body]
+    post.save
+    redirect_to '/'
+    flash[:alert] = "글이 수정되었습니다."
+  end
+
+  def edit
+      @post = Post.find(params[:id])
   end
 end
