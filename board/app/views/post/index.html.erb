@@ -1,0 +1,8 @@
+<h1>Post#index</h1>
+
+<% @posts.each do |post|%>
+    <p><%= post.id%></p>
+    <p><%= post.title%></p>
+    <p><%= post.body%></p>
+    <p><%= post.created_at%></p>
+<%end%>
