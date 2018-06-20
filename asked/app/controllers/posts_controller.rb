@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts =   Post.all.reverse
+    #  Post.all(:order => [ :id.desc ], :limit => 10)
   end
   def new
   end
@@ -17,10 +18,8 @@ class PostsController < ApplicationController
     @post = Post.find(id)
   end
   def update
-    id = params[:id]
-    post= Post.find(id)
-    post.title=params[:title]
-    post.title=params[:content]
+
+    Post.find(params[:id]).update(title: params[:title], content: params[:content])
     redirect_to "/"
   end
   def destroy

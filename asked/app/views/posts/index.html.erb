@@ -10,17 +10,17 @@
       <th scope="col">title</th>
       <th scope="col">edit</th>
       <th scope="col">del</th>
-      <th scope="col">show</th>
+
     </tr>
   </thead>
   <tbody>
 <% @posts.each do |p|%>
   <tr>
     <td> <%= p.username %> </td>
-    <td>  <%= p.title %></td>
-    <td><a href="/posts/edit/<%= p.id %>">edit</a> </td>
-    <td><a href="/posts/destroy/<%= p.id %>">del</a> </td>
-    <td>  <a href="/posts/show/<%= p.id %>">show</a>   </td>
+    <td><a href="/posts/<%= p.id %>/show"> <%= p.title %></a>  </td>
+    <td><a href="/posts/<%= p.id %>/edit">edit</a> </td>
+    <td><a href="/posts/<%= p.id %>/destroy" >del</a> </td>
+
   </tr>
 <%end%>
   </tbody>
