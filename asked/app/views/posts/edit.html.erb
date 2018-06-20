@@ -1,0 +1,19 @@
+<h1>Posts#edit</h1>
+<p>수정 하기</p>
+<div class="container">
+  <div class="row justify-content-md-center">
+<form action="/posts/update/<%= @post.id%>">
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" value="<%= @post.title%>" >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">content</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="content" value="<%= @post.content%>" >
+      </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+</div>
+</div>
