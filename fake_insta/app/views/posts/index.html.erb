@@ -4,6 +4,8 @@
   <p><%= post.id %></p>
   <p><%= post.title %></p>
   <p><%= post.content %></p>
+  <!-- -->
+  <%= link_to '글 보기', post %>
   <a href="/posts/<%=post.id%>">글 보러가기</a>
   <hr />
 <% end %>

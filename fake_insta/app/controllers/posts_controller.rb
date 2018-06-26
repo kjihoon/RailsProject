@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new #form for에 렌더링하기 위해 사용하는 빈 객체 생성
   end
 
   def create
@@ -28,7 +29,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirct_to "/"
+    redirect_to "/"
   end
 
   private
@@ -37,6 +38,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.permit(:title, :content)
+    params.require(:post).permit(:title, :content)
   end
 end
