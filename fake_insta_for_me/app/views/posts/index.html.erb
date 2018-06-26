@@ -1,0 +1,8 @@
+<%= link_to '글쓰기', new_post_path %>
+<% @posts.each do |post| %>
+  <p><%= post.id %></p>
+  <p><%= post.title %></p>
+  <p><%= post.content %></p>
+  <%= link_to '글보기', post %>
+  <hr />
+<% end %>
