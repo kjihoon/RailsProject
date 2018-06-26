@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master' ###facker data 만들어주는 gem
+gem 'pry-rails' # 이쁘게 output이 나오도록 도왖 는 쨈
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
