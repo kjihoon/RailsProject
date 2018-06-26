@@ -1,0 +1,101 @@
+=> [[32m#<Post:0x00005634acc1c6b8[0m
+  id: [1;34m1[0m,
+  title: [31m[1;31m"[0m[31mAbra[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mIf I can't even protect my captain's dream, then whatever ambition I have is nothing but talk! Luffy must be the man who becomes the Pirate King![1;31m"[0m[31m[0m,
+  user_id: [1;34m3[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1c438[0m
+  id: [1;34m2[0m,
+  title: [31m[1;31m"[0m[31mTangela[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mDon't ever think there's any perfect society made by humans!! If you think that way you'll overlook the enemy!! Don't be fooled by appearances![1;31m"[0m[31m[0m,
+  user_id: [1;34m4[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1c2f8[0m
+  id: [1;34m3[0m,
+  title: [31m[1;31m"[0m[31mClefairy[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mIf you want to protect something, do it right! Don't let them get their way anymore![1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1c1b8[0m
+  id: [1;34m4[0m,
+  title: [31m[1;31m"[0m[31mDrowzee[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mI don't wanna live a thousand years. If I just live through today, that'll be enough.[1;31m"[0m[31m[0m,
+  user_id: [1;34m2[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1c078[0m
+  id: [1;34m5[0m,
+  title: [31m[1;31m"[0m[31mPoliwhirl[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mWhen do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No... It’s when they're forgotten![1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1bec0[0m
+  id: [1;34m6[0m,
+  title: [31m[1;31m"[0m[31mEkans[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mCompared to the [1;35m\"[0m[31mrighteous[1;35m\"[0m[31m greed of the rulers, the criminals of the world seem much more honorable. When scum rules the world, only more scum is born.[1;31m"[0m[31m[0m,
+  user_id: [1;34m5[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1bd08[0m
+  id: [1;34m7[0m,
+  title: [31m[1;31m"[0m[31mGrowlithe[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mFood is a gift from god. Spices are a gift from the devil. It looks like it was a bit too spicy for you.[1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1bbc8[0m
+  id: [1;34m8[0m,
+  title: [31m[1;31m"[0m[31mLickitung[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mCompared to the [1;35m\"[0m[31mrighteous[1;35m\"[0m[31m greed of the rulers, the criminals of the world seem much more honorable. When scum rules the world, only more scum is born.[1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1ba60[0m
+  id: [1;34m9[0m,
+  title: [31m[1;31m"[0m[31mKakuna[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mTo true friendship, how long you've known each other means nothing.[1;31m"[0m[31m[0m,
+  user_id: [1;34m2[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1b880[0m
+  id: [1;34m10[0m,
+  title: [31m[1;31m"[0m[31mSeel[1;31m"[0m[31m[0m,
+  content:
+   [31m[1;31m"[0m[31mCompared to the [1;35m\"[0m[31mrighteous[1;35m\"[0m[31m greed of the rulers, the criminals of the world seem much more honorable. When scum rules the world, only more scum is born.[1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m28[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1b650[0m
+  id: [1;34m11[0m,
+  title: [1;36mnil[0m,
+  content: [1;36mnil[0m,
+  user_id: [1;36mnil[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m32[0m:[1;34m53[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m32[0m:[1;34m53[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1b498[0m
+  id: [1;34m12[0m,
+  title: [1;36mnil[0m,
+  content: [1;36mnil[0m,
+  user_id: [1;36mnil[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m32[0m:[1;34m53[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m32[0m:[1;34m53[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Post:0x00005634acc1b290[0m
+  id: [1;34m13[0m,
+  title: [1;36mnil[0m,
+  content: [1;36mnil[0m,
+  user_id: [1;36mnil[0m,
+  created_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m32[0m:[1;34m53[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m26[0m [1;34;4mJun[0m [1;34m2018[0m [1;34m04[0m:[1;34m32[0m:[1;34m53[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]
