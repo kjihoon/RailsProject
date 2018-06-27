@@ -3,13 +3,15 @@
 <%= @post.title %>
 <%= @post.content %>
 
+<%if current_user.id==@post.id %>
 <%= link_to '수정하기', edit_post_path(@post) %>
 <%= link_to '삭제하기',
                       @post,
                       method: :delete,
                       data: {confirm: '너지울거야?'} %>
-<hr />
 
+<hr />
+<%end%>
 <form action="/posts/<%= @post.id%>/comments" method="post">
   <input type="text" name="content" /><br />
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

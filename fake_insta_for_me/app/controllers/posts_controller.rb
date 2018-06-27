@@ -2,7 +2,13 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
   def index
-    @posts = Post.all
+    #@posts = Post.all
+    #page =1 default
+    @posts =Post.all.page(params[:page]).per(3)
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   def new
@@ -11,8 +17,23 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
-    @post.save
-    redirect_to "/"
+    respond_to do |format|
+
+    # Post.create는 rollback까지 포함되어 new를 사용하여 save 여부 확인
+    if @post.save
+      #저장이 되었을 경우 실행
+      #flash[:notice] = "글 작성이 완료되었습니다."
+      #redirect_to "/"
+      format.html {redirect_to '/',notice: "작성완료"}
+
+    else
+      # 저장이 실패 했을경우(validation에 걸렸을때 실행)
+        #flash[:alert] = "글 작성이 실패했습니다."
+        #redirect_to new_post_path
+          format.html {render :new}
+          format.json {render json: @post.error}
+      end
+    end
   end
 
   def show
@@ -20,6 +41,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    if current==@post.user.id
+
+    elsif
+      redirect_to '/'
+    end
   end
 
   def update
