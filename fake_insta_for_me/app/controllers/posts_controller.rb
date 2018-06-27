@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
+
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
+  load_and_authorize_resource
   def index
     #@posts = Post.all
     #page =1 default
-    @posts =Post.all.page(params[:page]).per(3)
+    #@posts =Post.all.page(params[:page]).per(3)
+    @posts =Post.order(created_at: :desc).page(params[:page]).per(3)
     respond_to do |format|
       format.html
       format.json { render json: @posts }
@@ -31,7 +34,7 @@ class PostsController < ApplicationController
         #flash[:alert] = "글 작성이 실패했습니다."
         #redirect_to new_post_path
           format.html {render :new}
-          format.json {render json: @post.error}
+          format.json {render json: @post.errors}
       end
     end
   end
@@ -41,7 +44,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if current==@post.user.id
+    if current_user==@post.user.id
 
     elsif
       redirect_to '/'
@@ -49,8 +52,17 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update(post_params)
-    redirect_to "/posts/#{@post.id}"
+    respond_to do |format|
+      if @post.update(post_params)
+      format.html{redirect_to @post,notice: '글 수정완료!'}
+    else
+      format.html {render :edit}
+      format.json {render json: @post.errors}
+    end
+    end
+    #@post.update(post_params)
+    #redirect_to "/posts/#{@post.id}"
+
   end
 
   def destroy
