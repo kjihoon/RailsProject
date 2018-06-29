@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :posts
   post '/posts/:post_id/comments' => 'comments#create'
-
+  delete '/comments/:comment_id' => 'comments#destroy', as: 'destroy_comment'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

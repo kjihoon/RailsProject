@@ -2,14 +2,15 @@ class PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
-  load_and_authorize_resource
-  def index
+  load_and_authorize_resource #restful 구조로 구성했을때는 이거 한줄로 권한 설정
+
+    def index
     #@posts = Post.all
     #page =1 default
     #@posts =Post.all.page(params[:page]).per(3)
     @posts =Post.order(created_at: :desc).page(params[:page]).per(3)
     respond_to do |format|
-      format.html
+      format.html #아무것도 넣지 않으면 controller action명과 동일한것으로 rendering 된다.
       format.json { render json: @posts }
     end
   end

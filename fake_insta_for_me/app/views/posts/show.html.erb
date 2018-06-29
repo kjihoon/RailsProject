@@ -14,14 +14,87 @@
 <%end%>
 <hr />
 
-<form action="/posts/<%= @post.id%>/comments" method="post">
+<form action="/posts/<%= @post.id%>/comments" method="post" data-remote=true >
   <input type="text" name="content" /><br />
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" />
+  <input  type="submit" />
 </form>
 <hr />
-
+<div id="comments">
 <% @comments.each do |comment| %>
+  <p>
   <%= comment.content %>
+  <%= link_to '삭제하기', destroy_comment_path(comment.id),remote: true,method: :delete, class:"delete_comment"%>
+  </p>
   <hr />
 <% end %>
+</div>
+<script>
+$('form').on('ajax:success',function(){
+    $('input[name="content"]').val("");
+})
+</script>
+
+
+<!--
+<script>
+
+$('input[type=submit]').click(function(e){
+  e.preventDefault();
+  //alert('start')
+  $.ajax({
+    url:$('form').attr('action'),
+    type:'POST',
+    data:{content: $('input[name="content"]').val(),
+          authenticity_token: $('[name="csrf-token"]').attr('content')
+    },
+    //dataType: 'script',
+    success: function(){
+      $('input[name="content"]').val("");
+    },
+    error: function(){
+      alert('fail')
+    }
+  })
+})
+$('.delete_comment').click(function(e){
+  e.preventDefault();
+  //alert("start delete")
+  $.ajax({
+    url:this.href,
+    type:'DELETE',
+    data:  {authenticity_token: $('[name="csrf-token"]').attr('content')
+        },
+    dataType:'script',
+    success:function(){},
+    error:function(){alert("fail")}
+  })
+})
+</script> -->
+<!-- <script>
+
+$("input[type='submit']").click(function(e){
+  var response = confirm("제출 하실건가요?");
+  if (!response){
+    //해당 코드가 실행되려면 response ==false
+
+    //e.preventDefault();
+    return false; //위랑 동일
+  }else{
+    //e.stopImmediatePropagation() // 동일한 element에 있는 다른 이벤트 발생 정
+  }
+})
+
+function checkContentLength(e){
+  var content = $('input[name="content"]').val();
+  if (content.length<=10){
+    alert("10글자 이상 작성해 주세요")
+    return false;
+  }else{
+    alert("우왕~ 잘했엉")
+  }
+}
+$("input[type='submit']").on("click",checkContentLength);
+
+
+</script> -->
