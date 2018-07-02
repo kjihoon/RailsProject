@@ -29,6 +29,27 @@
 <%= link_to 'New Post', new_post_path %>
 
 <script>
-  $('form').on('type','submit')
+  $('input[type="submit"]').click(function(e){
+    e.preventDefault();
+    $.ajax({
+   url:$('form').attr('action'),
+   type:'POST',
+   data:{post: {content: $("#post_content").val(),
+         title: $("#post_title").val()},
+         authenticity_token: $('[name="csrf-token"]').attr('content')
+   },
+   //dataType: 'script',
+   success: function(){
+     $("#post_content").val("");
+     $("#post_title").val("");
+     alert("success")
+   },
+   error: function(){
+     alert('fail')
+   }
+ })
+  })
+
+
 
 </script>
