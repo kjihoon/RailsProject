@@ -1,0 +1,126 @@
+<h1>글 봐!!</h1>
+<p><%= @post.id %>번째 글</p>
+<p>작성자: <%= @post.user.name %></p>
+<p>제목: <%= @post.title %></p>
+<p>내용: <%= @post.content %></p>
+<p><%= image_tag @post.img %></p>
+
+
+<!-- 현재 로그인한 사용자가 쓴글만 삭제 수정할 수 있도록 하는 로직 -->
+<%# if current_user.id == @post.user.id %>
+<% if can? :edit, @post %>
+<%= link_to '수정하기', edit_post_path(@post) %>
+<%end%>
+<% if can? :destroy, @post %>
+<%= link_to '삭제하기',@post, method: :delete, data: {confirm: '지울꺼야?'}%>
+<%end%>
+<hr />
+<%#end%>
+
+<!-- <a href="/posts/<%= @post.id %>/edit">수정하기</a>
+<a href="/posts/<%= @post.id %>" data-method="delete" data-confirm="삭제할래?">삭제하기</a> -->
+
+<h3>댓글 작성하기</h3>
+<form action="/posts/<%= @post.id%>/comments" method="post" data-remote=true>
+  <input type="text" name="content" />
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" />
+</form>
+<hr />
+
+
+
+<div id = "comments">
+<% @comments.each do |comment| %>
+  <p>
+     <%= comment.content %>
+     <%= link_to '삭제하기', destroy_comment_path(comment.id), method: :delete, remote: true, class: "delete_comment" %>
+  </p>
+  <hr />
+<% end %>
+</div>
+
+
+
+<script>
+  $('form').on("ajax:success", function(){
+     $('input[name="content"]').val("");
+  });
+</script>
+
+<!-- <script>
+
+
+//댓글
+    $('input[type="submit"]').on('click',function(e){
+      e.preventDefault();
+      alert('start_submit');
+      $.ajax({
+        url: $('form').attr('action'),
+        type: 'POST',
+        data: {content: $('input[name="content"]').val(),
+               authenticity_token:$('[name="csrf-token"]').attr('content')
+              },
+        dataType: 'script',
+        success: function(){
+          alert('success')
+          $('input[name="content"]').val("");
+        },
+        error: function(){
+          alert('fail')
+        }
+      });
+    });
+
+
+
+//댓글 삭제
+    $('.delete_comment').on("click",function(e){
+       e.preventDefault();
+       alert('start_delete');
+       $.ajax({
+         url: this.href,
+         type: 'DELETE',
+         data: {authenticity_token:$('[name="csrf-token"]').attr('content')},
+         dataType: 'script',
+         success: function(){
+            alert('delete_complete');
+         },
+         error: function(){
+           alert('delete_error');
+         }
+       });
+    });
+
+
+
+</script> -->
+
+
+<!--
+<script>
+
+   $('input[type="submit"]').on('click', function(e){
+    var response =  confirm("정말 제출하실건가요:)");
+    if (!response){
+       //e.preventDefault();  //취소 누를경우 response == false, 이때는 input tag의 submit기능을 막는다, return false와 같<>
+       e.stopImmediatePropagation();
+       return false;
+    }else{
+      //e.stopImmediatePropagation();
+    }
+  });
+
+  function checkContentLen(e){
+    var content = $('input[name = "content"]').val();
+    if(content.length < 10){
+      alert("10글자 이상 작성해 주세요");
+      return false;
+    }else{
+      alert('참 잘했어요');
+    }
+  }
+
+  $('input[type="submit"]').on('click', checkContentLen);
+
+</script> -->
