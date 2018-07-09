@@ -1,16 +1,20 @@
 source 'https://rubygems.org'
 
+gem 'aws-sdk'
+gem 'figaro'
 #파일 업로드
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
-
+gem "fog"
 gem 'cancancan', '~> 2.0'
 gem 'kaminari'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'pry-rails'
 
 gem 'simple_form'
-
+gem 'tinymce-rails'
+gem 'tinymce-rails-langs'
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

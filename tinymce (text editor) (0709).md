@@ -1,0 +1,109 @@
+## tinymce (text editor) (0709)
+
+[link](https://github.com/spohlenz/tinymce-rails)
+
+```ruby
+gem 'tinymce-rails'
+```
+
+```cmd
+$ bundle install
+```
+
+```ruby
+#config/tinymce.yml  ##직접 생성후 기입
+default:
+  selector: textarea
+  language: ko
+  toolbar: styleselect | bold italic | undo redo | table
+  plugins:
+    - table
+    - image
+    - link
+    - textcolor
+    - colorpicker
+    - wordcount
+```
+
+```js
+#app/javascript/application.js
+//= require tinymce-jquery
+```
+
+```erb
+<%= f.input :content , class: 'tinymce', row: 40, cols: 120 %>
+<%= tinymce%>
+```
+
+
+
+#### 참고 
+
+- yml에 지정안하고 사용할때
+
+```javascript
+$(document).ready(function(){
+  tinyMCE.init({
+    selector: 'textarea'
+    editor_selector 'tinymce',
+    plugin: ['table','image','link']
+    toolbar: 'stylesheet | bold italic | undo redo | table'
+  })
+})
+```
+
+
+
+
+
+
+
+```ruby
+## 언어 설정과 image upload
+gem 'tinymce-rails-langs'
+gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload'
+```
+
+```ruby
+default:
+  selector: textarea
+  language: ko # 추가
+  uploadimage_default_img_class: img-fluid # 추가
+  paste_data_images: true # 추가
+  toolbar: styleselect | bold italic | undo redo | table
+  plugins:
+    - table
+    - image
+    - link
+    - textcolor
+    - colorpicker
+    - wordcount
+    - uploadimage # 추가
+    - paste # 추가
+
+
+```
+
+```ruby
+#routes.tb  아래 추가
+post '/tinymce_assets' => 'tinymce_assets#create'
+```
+
+```cmd
+$ rails g controller TinyAssetscreate
+```
+
+
+
+
+
+
+
+## aws sdk
+
+원하는 언어에 맞는 api 이용가능하게 만들어주는 gem
+
+```ruby
+gem 'aws-sdk'
+```
+

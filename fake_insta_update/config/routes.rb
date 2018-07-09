@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   resources :posts
-
+  post '/tinymce_assets' => 'tinymce_assets#create'
   post '/posts/:post_id/comments' => 'comments#create'
   delete '/comments/:comment_id' => 'comments#destroy', as: 'destroy_comment'  #이 url에 접근할 때 destroy_comment라는 이름으로 접근가능
 
