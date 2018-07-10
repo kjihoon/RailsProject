@@ -13,7 +13,8 @@
 
 <div class = "">
 
-<%= gravatar(current_user) %>
+<%# gravatar(current_user) %>
+
 <!-- <%# if flash[:alert]%>
 <div class="alert alert-warning" role="alert">
   <%# flash[:alert] %>
@@ -25,6 +26,7 @@
 <%#end%> -->
 
 <% if user_signed_in? %>
+<%= image_tag current_user.profile_jpg%>
   <span><%= current_user.email%></span>
   <span><%= current_user.name%></span>
   <a href="/users/sign_out" data-method="delete">로그아웃</a>

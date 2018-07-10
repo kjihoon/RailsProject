@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'omniauth-facebook'
 gem 'aws-sdk'
 gem 'figaro'
 #파일 업로드
