@@ -8,7 +8,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     p request.env['omniauth.auth']
     p "*************************************"
     auth=env['omniauth.auth']
-    @user = User.find_auth(auth)
+    @user = User.find_auth(auth,current_user)
     if @user.persisted?
         sign_in_and_redirect @user, event: :authentication
     else
@@ -27,6 +27,34 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # )
 
   end
+  def kakao
+    p "*************************************"
+    p request.env['omniauth.auth']
+    p "*************************************"
+    auth=env['omniauth.auth']
+    @user = User.find_auth(auth,current_user)
+    if @user.persisted?
+        sign_in_and_redirect @user, event: :authentication
+    else
+      redirect_to new_user_registration_path
+    end
+  end
+
+  def after_sign_path_for(resource)
+    auth = requrest.env['omniauth.auth']
+    @identity = Identity.find_auth(auth)
+    @user = User.find(current_user.id)
+    if @user.persisted?
+      if auth.provider =='kakao' && @user.email.empty?
+        return users_info_path
+      end
+    end
+    '/'
+  end
+
+
+
+
   # You should also create an action method in this controller like this:
   # def twitter
   # end

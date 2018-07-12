@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
+
+//= require jquery.min
+//= require bootstrap.min
+//= require easing
+//= require gmap3.min
+//= require parallax
+//= require owl.carousel
+//= require main.js

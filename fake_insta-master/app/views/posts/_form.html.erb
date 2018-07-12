@@ -1,0 +1,26 @@
+<%# form_for @post do |f| %>
+  <%# f.error_messages %>
+  <%# f.text_field :title %>
+  <%# f.text_area :content %>
+  <%# f.submit %>
+<%# end %>
+
+<%= simple_form_for @post, html: {multipart: true} do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :title %>
+  <%= f.input :content, class: "tinymce", rows: 40, cols: 120 %>
+  <%= tinymce %>
+  <%= f.input :img %>
+  <%= f.button :submit, class: "btn-primary" %>
+<% end %>
+
+<!-- <script type="text/javascript">
+$(document).on('ready', function() {
+  tinyMCE.init({
+    selector: 'textarea',
+    editor_selector: 'tinymce',
+    plugins: ['table', 'uploadimage', 'link'],
+    toolbar: ' styleselect | bold italic | undo redo | table'
+  });
+})
+</script> -->

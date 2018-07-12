@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'omniauth-facebook'
+gem 'omniauth-kakao', :git => 'https://github.com/hcn1519/omniauth-kakao'
 gem 'aws-sdk'
 gem 'figaro'
 #파일 업로드

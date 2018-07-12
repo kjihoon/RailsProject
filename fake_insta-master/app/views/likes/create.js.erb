@@ -1,0 +1,17 @@
+var like_btn = $('a[data-id=<%=@post_id%>]');
+like_btn.next().text(<%=Post.find(@post_id).liked_users.count%>);
+console.log("************put*************")
+console.log(like_btn.data());
+like_btn.removeData('method');
+console.log(like_btn.data());
+console.log(like_btn.attr('data-method'));
+like_btn.data('method', 'delete');
+console.log(like_btn.data());
+console.log(like_btn);
+console.log($('a[data-id=<%=@post_id%>]').attr('data-method'));
+like_btn.children().toggleClass('far');
+like_btn.children().toggleClass('fas');
+
+
+// var l = document.querySelector('a[data-id="3"]');
+// l.setAttribute('data-method', 'delete');
